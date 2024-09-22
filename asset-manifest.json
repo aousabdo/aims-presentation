@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aousabdo/aims-presentation/static/css/main.b0d52146.css",
-    "main.js": "/aousabdo/aims-presentation/static/js/main.4cbcc087.js",
-    "static/js/453.9d0af9cd.chunk.js": "/aousabdo/aims-presentation/static/js/453.9d0af9cd.chunk.js",
-    "index.html": "/aousabdo/aims-presentation/index.html",
-    "main.b0d52146.css.map": "/aousabdo/aims-presentation/static/css/main.b0d52146.css.map",
-    "main.4cbcc087.js.map": "/aousabdo/aims-presentation/static/js/main.4cbcc087.js.map",
-    "453.9d0af9cd.chunk.js.map": "/aousabdo/aims-presentation/static/js/453.9d0af9cd.chunk.js.map"
+    "main.css": "/aims-presentation/static/css/main.b0d52146.css",
+    "main.js": "/aims-presentation/static/js/main.40e34fd3.js",
+    "static/js/453.9d0af9cd.chunk.js": "/aims-presentation/static/js/453.9d0af9cd.chunk.js",
+    "index.html": "/aims-presentation/index.html",
+    "main.b0d52146.css.map": "/aims-presentation/static/css/main.b0d52146.css.map",
+    "main.40e34fd3.js.map": "/aims-presentation/static/js/main.40e34fd3.js.map",
+    "453.9d0af9cd.chunk.js.map": "/aims-presentation/static/js/453.9d0af9cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b0d52146.css",
-    "static/js/main.4cbcc087.js"
+    "static/js/main.40e34fd3.js"
   ]
 }
