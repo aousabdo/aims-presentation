@@ -45,7 +45,7 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12"
   },
-  "homepage": "https://github.com/aousabdo/aims-presentation",
+  "homepage": "https://aousabdo.github.io/aims-presentation",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
 }
