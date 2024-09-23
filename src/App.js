@@ -21,6 +21,8 @@ import ProjectCollaborationSlide from './components/ProjectCollaboration';
 import TabukMunicipalitySlide from './components/TabukMunicipality';
 import NEOMProjectSlide from './components/NEOMProject';
 import CostAnalysisSlide from './components/CostAnalysis';
+import AppendixSlide from './components/Appendix';
+
 const slides = [
   { component: CoverPage, name: 'Cover' },
   { component: TableOfContents, name: 'Table of Contents' },
@@ -34,6 +36,7 @@ const slides = [
   { component: AboutAnalyticaOne, name: 'About Analytica' },
   { component: AboutAnalyticaTwo, name: 'Our Success Stories' },
   { component: QnA, name: 'Q&A' },
+  { component: AppendixSlide, name: 'Appendix' },
   { component: AIMSRisksTitleSlide, name: 'AIMS Project: High-Level Risks and Mitigations' },
   { component: DataPrivacySecuritySlide, name: 'Risk 1: Data Privacy and Security' },
   { component: SystemReliabilitySlide, name: 'Risk 2: System Reliability and Downtime' },

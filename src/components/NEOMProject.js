@@ -19,7 +19,7 @@ const NEOMProjectSlide = () => (
             <span className="text-cyan-700 font-bold">Innovation Hub</span>
           </div>
           <ul className="list-disc pl-6 text-cyan-600">
-            <li>\$500 billion mega-city project</li>
+            <li>$500 billion mega-city project</li>
             <li>Testbed for advanced technologies</li>
             <li>AI-driven urban planning and management</li>
           </ul>
