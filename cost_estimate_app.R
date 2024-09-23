@@ -13,25 +13,25 @@ initial_cost_data <- list(
              "Development tools and licenses", "Third-party APIs and services",
              "Training", "Yearly Maintenance (starting year 3)"),
     Quantity = c(3, 2, 4, 2, 2, 4, 1, 1, 1, 1),
-    Cost = c(600000, 600000, 500000, 360000, 360000, 480000, 500000, 200000, 200000, 500000),
+    Cost = c(600000, 600000, 500000, 360000, 360000, 480000, 500000, 350000, 500000, 500000),
     Suffix = c(rep("/ 2 years", 6), "", "", "", "/ year")
   ),
   "Hardware" = data.frame(
     Item = c("AI-enabled cameras", "Edge computing devices", "Environmental sensors", 
              "Installation and networking", "High-performance servers", "Networking equipment", 
              "Workstations for operators", "Large display screens", "Drones", "Solar panels",
-             "Starlink devices installation"),  // Added Starlink devices installation
-    Quantity = c(35, 35, 35, 1, 5, 1, 10, 10, 35, 35, 35),  // Updated quantity
-    Cost = c(10000, 2000, 1000, 1300000, 100000, 500000, 30000, 20000, 20000, 15000, 500),  // Added cost
-    Suffix = rep("", 11)  // Updated suffix
+             "Starlink devices"),  # Added Starlink devices installation
+    Quantity = c(35, 35, 105, 1, 5, 1, 10, 10, 35, 35, 35),  # Updated quantity
+    Cost = c(10000, 2000, 1000, 1500000, 100000, 1000000, 30000, 10000, 20000, 15000, 500),  # Added cost
+    Suffix = rep("", 11)  # Updated suffix
   ),
   "Cloud Infrastructure" = data.frame(
     Item = c("Compute resources (Dev)", "Storage (Dev)", "AI and ML services (Dev)", 
              "Compute resources (Prod)", "Storage (Prod)", "AI and ML services (Prod)", 
-             "Networking and data transfer", "Starlink connectivity"),  // Added Starlink connectivity
-    Quantity = c(rep(1, 7), 35),  // Updated quantity
-    Cost = c(350000, 150000, 120000, 500000, 180000, 96000, 50000, 100),  // Added cost
-    Suffix = c(rep("/ year", 8))  // Updated suffix
+             "Networking and data transfer", "Starlink connectivity"),  # Added Starlink connectivity
+    Quantity = c(rep(1, 7), 35),  # Updated quantity
+    Cost = c(350000, 150000, 120000, 500000, 180000, 96000, 50000, 3000),  # Updated cost
+    Suffix = c(rep("/ year", 8))  # Updated suffix
   )
 )
 
@@ -52,28 +52,35 @@ ui <- dashboardPage(
       tags$style(HTML("
         .content-wrapper, .right-side { background-color: #f4f6f9; }
         .box { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .total-box { font-size: 24px; font-weight: bold; text-align: center; padding: 20px; color: white; border-radius: 5px; }
+        .total-box { font-size: 38px; font-weight: bold; text-align: center; padding: 20px; color: white; border-radius: 5px; }
         .small-box { overflow: hidden; }
       "))
     ),
     tabItems(
       tabItem(tabName = "dashboard",
         fluidRow(
-          column(width = 4,
-            box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary",
+          column(width = 4, 
+            box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary", height = "800px",
               DTOutput("software_table"),
+              br(),
+              
               plotlyOutput("software_plot", height = "300px")
             )
           ),
           column(width = 4,
-            box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info",
+            box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info", height = "800px",
               DTOutput("hardware_table"),
               plotlyOutput("hardware_plot", height = "300px")
             )
           ),
           column(width = 4,
-            box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning",
+            box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning", height = "800px",
               DTOutput("cloud_table"),
+              br(),
+              br(),
+              br(),
+              br(),
+              br(),
               plotlyOutput("cloud_plot", height = "300px")
             )
           )
@@ -103,6 +110,7 @@ ui <- dashboardPage(
           box(
             title = "Yearly Running Costs", width = 12, solidHeader = TRUE, status = "success",
             DTOutput("running_costs_table"),
+            br(),
             valueBoxOutput("running_costs_total", width = 12)
           )
         )

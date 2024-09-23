@@ -1,0 +1,12 @@
+name: AIMS-Cost-Analysis
+title: AIMS-Cost-Analysis
+username: analytica
+account: analytica
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12793315
+bundleId: 9134300
+url: https://analytica.shinyapps.io/AIMS-Cost-Analysis/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
