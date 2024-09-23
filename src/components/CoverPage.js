@@ -38,7 +38,10 @@ const CoverPage = () => (
         </div>
       </div>
     </div>
-    <div className="mt-8 text-sm text-green-300">Confidential & Proprietary</div>
+    <div className="mt-8 text-2xl text-green-300">Confidential & Proprietary</div>
+    <div className="mt-2 text-2xl text-green-300 text-center">
+      This document is the intellectual property of Analytica. No part of this document may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of Analytica.
+    </div>
   </div>
 );
 
