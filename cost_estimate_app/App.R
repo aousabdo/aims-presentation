@@ -11,10 +11,10 @@ initial_cost_data <- list(
         Item = c("Senior Data Scientists", "Machine Learning Engineers", "Full-stack Developers", 
                  "UI/UX Designer", "Project Manager", "DevOps Engineers", 
                  "Development tools and licenses", "Third-party APIs and services",
-                 "Training", "Yearly Maintenance (starting year 3)"),
-        Quantity = c(3, 2, 4, 2, 2, 4, 1, 1, 1, 1),
-        Cost = c(600000, 600000, 500000, 360000, 360000, 480000, 500000, 350000, 500000, 500000),
-        Suffix = c(rep("/ 2 years", 6), "", "", "", "/ year")
+                 "Training", "Yearly Maintenance (starting year 3)", "Travel Costs (first 2 years)", "Travel Costs (maintenance)"),  # Added travel costs
+        Quantity = c(3, 2, 4, 2, 4, 4, 1, 1, 1, 1, 2, 1),  # Updated quantity
+        Cost = c(1000000, 1000000, 1000000, 700000, 550000, 800000, 500000, 350000, 1000000, 1000000, 500000, 300000),  # Updated cost
+        Suffix = c(rep("/ 2 years", 6), "", "", "", "/ year", "/ year", "/ year")  # Updated suffix
     ),
     "Hardware" = data.frame(
         Item = c("AI-enabled cameras", "Edge computing devices", "Environmental sensors", 
@@ -67,22 +67,38 @@ ui <- dashboardPage(
             tabItem(tabName = "dashboard",
                     fluidRow(
                         column(width = 4, 
-                               box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary", height = "800px",
+                               box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary", height = "990px",
                                    DTOutput("software_table"),
-                                   br(),
-                                   
                                    plotlyOutput("software_plot", height = "300px")
                                )
                         ),
                         column(width = 4,
-                               box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info", height = "800px",
+                               box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info", height = "990px",
                                    DTOutput("hardware_table"),
+                                   br(), 
+                                   br(),
+                                   br(),
+                                   br(), 
+                                   br(),
+                                   br(),
+                                   br(),
+                                   br(),
+                                   br(),
                                    plotlyOutput("hardware_plot", height = "300px")
                                )
                         ),
                         column(width = 4,
-                               box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning", height = "800px",
+                               box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning", height = "990px",
                                    DTOutput("cloud_table"),
+                                   br(),
+                                   br(),
+                                   br(),
+                                   br(),
+                                   br(),
+                                   br(), 
+                                   br(),
+                                   br(),
+                                   br(), 
                                    br(),
                                    br(),
                                    br(),
@@ -274,7 +290,15 @@ server <- function(input, output, session) {
         cloud_infrastructure <- cost_data()$`Cloud Infrastructure` %>%
             mutate(Total = Quantity * Cost)
         
-        bind_rows(software_maintenance, cloud_infrastructure)
+        travel_costs_first_two_years <- cost_data()$`Software Development` %>%
+            filter(Item == "Travel Costs (first 2 years)") %>%
+            mutate(Total = Quantity * Cost)
+        
+        travel_costs_maintenance <- cost_data()$`Software Development` %>%
+            filter(Item == "Travel Costs (maintenance)") %>%
+            mutate(Total = Quantity * Cost)
+        
+        bind_rows(software_maintenance, cloud_infrastructure, travel_costs_first_two_years, travel_costs_maintenance)
     })
     
     # Render running costs table
