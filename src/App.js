@@ -20,7 +20,8 @@ import AnalyticaTeamSlide from './components/AnalyticaTeam';
 import ProjectCollaborationSlide from './components/ProjectCollaboration';
 import TabukMunicipalitySlide from './components/TabukMunicipality';
 import NEOMProjectSlide from './components/NEOMProject';
-
+import AIMSCostAnalysis from './components/AIMSCostAnalysis';
+import AIMSRunningCosts from './components/AIMSRunningCosts';
 const slides = [
   { component: CoverPage, name: 'Cover' },
   { component: TableOfContents, name: 'Table of Contents' },
@@ -30,6 +31,8 @@ const slides = [
   { component: SolutionArchitecture, name: 'Solution Architecture' },
   { component: SolutionFeatures, name: 'Solution Features: AI Capabilities' },
   { component: HighLevelOperatingModel, name: 'High-Level Operating Model' },
+  { component: AIMSCostAnalysis, name: 'AIMS Cost Analysis' },
+  { component: AIMSRunningCosts, name: 'AIMS Yearly Running Costs' },
   { component: AboutAnalyticaOne, name: 'About Analytica' },
   { component: AboutAnalyticaTwo, name: 'Our Success Stories' },
   { component: QnA, name: 'Q&A' },
