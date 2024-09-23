@@ -5,7 +5,7 @@ account: analytica
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12793315
-bundleId: 9134373
+bundleId: 9134767
 url: https://analytica.shinyapps.io/AIMS-Cost-Analysis/
 version: 1
 asMultiple: FALSE

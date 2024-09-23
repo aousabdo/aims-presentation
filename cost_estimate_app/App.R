@@ -67,38 +67,22 @@ ui <- dashboardPage(
             tabItem(tabName = "dashboard",
                     fluidRow(
                         column(width = 4, 
-                               box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary", height = "990px",
+                               box(title = "Software Development Costs", width = NULL, solidHeader = TRUE, status = "primary", height = "900px",
                                    DTOutput("software_table"),
+                                   
+                                   
                                    plotlyOutput("software_plot", height = "300px")
                                )
                         ),
                         column(width = 4,
-                               box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info", height = "990px",
+                               box(title = "Hardware Costs", width = NULL, solidHeader = TRUE, status = "info", height = "800px",
                                    DTOutput("hardware_table"),
-                                   br(), 
-                                   br(),
-                                   br(),
-                                   br(), 
-                                   br(),
-                                   br(),
-                                   br(),
-                                   br(),
-                                   br(),
                                    plotlyOutput("hardware_plot", height = "300px")
                                )
                         ),
                         column(width = 4,
-                               box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning", height = "990px",
+                               box(title = "Cloud Infrastructure Costs", width = NULL, solidHeader = TRUE, status = "warning", height = "800px",
                                    DTOutput("cloud_table"),
-                                   br(),
-                                   br(),
-                                   br(),
-                                   br(),
-                                   br(),
-                                   br(), 
-                                   br(),
-                                   br(),
-                                   br(), 
                                    br(),
                                    br(),
                                    br(),
