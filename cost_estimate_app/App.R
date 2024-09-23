@@ -37,7 +37,13 @@ initial_cost_data <- list(
 
 ui <- dashboardPage(
     skin = "green",
-    dashboardHeader(title = "AIMS Cost Analysis"),
+    dashboardHeader(
+        title = tags$div(
+            tags$img(src = "F_B_Cover_and_photo_clipped.png", height = "32px", style = "margin-right: 10px; vertical-align: middle;"),
+            tags$span("AIMS Cost Analysis", style = "vertical-align: middle;")
+        ),
+        titleWidth = 250  # Adjust this value as needed
+    ),
     dashboardSidebar(
         sidebarMenu(
             menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
@@ -54,7 +60,8 @@ ui <- dashboardPage(
         .box { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         .total-box { font-size: 38px; font-weight: bold; text-align: center; padding: 20px; color: white; border-radius: 5px; }
         .small-box { overflow: hidden; }
-      "))
+      ")),
+            tags$link(rel = "icon", type = "image/png", href = "F_B_Cover_and_photo_clipped.png")  # Add this line
         ),
         tabItems(
             tabItem(tabName = "dashboard",
