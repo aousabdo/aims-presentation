@@ -22,6 +22,10 @@ import TabukMunicipalitySlide from './components/TabukMunicipality';
 import NEOMProjectSlide from './components/NEOMProject';
 import CostAnalysisSlide from './components/CostAnalysis';
 import AppendixSlide from './components/Appendix';
+import ImplementationStrategyOneSlide from './components/ImplementationStrategyOne';
+import TimelineSlide from './components/ImplementationTimeline';
+import RevisedKeyConsiderationsSlide from './components/KeyConsiderations';
+
 
 const slides = [
   { component: CoverPage, name: 'Cover' },
@@ -47,6 +51,9 @@ const slides = [
   { component: ProjectCollaborationSlide, name: 'Project Collaboration' },
   { component: TabukMunicipalitySlide, name: 'Tabuk Municipality' },
   { component: NEOMProjectSlide, name: 'NEOM Project' },
+  { component: ImplementationStrategyOneSlide, name: 'Implementation Strategy' },
+  { component: TimelineSlide, name: 'Implementation Timeline' },
+  { component: RevisedKeyConsiderationsSlide, name: 'Key Considerations' },
 ];
 
 function App() {

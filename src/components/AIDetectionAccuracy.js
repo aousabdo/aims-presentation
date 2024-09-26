@@ -16,7 +16,7 @@ const AIDetectionAccuracySlide = () => (
         <h3 className="text-2xl font-bold mb-4 text-purple-700">Mitigations:</h3>
         <ul className="list-disc pl-8 text-purple-600 text-xl">
           <li>Continuous training and refinement of AI models</li>
-          <li>Multi-modal verification (e.g., camera + GPS data)</li>
+          <li>Multi-modal verification (e.g., camera + IR Camera + IoT sensors + GPS data)</li>
           <li>Regular performance evaluations and adjustments</li>
           <li>Human oversight for critical decisions</li>
         </ul>
