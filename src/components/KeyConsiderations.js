@@ -1,49 +1,59 @@
 import React from 'react';
-import { Camera, Shield, Car, Brain, Database, Cloud } from 'lucide-react';
 import SlideWrapper from './SlideWrapper';
-import { Calendar, CheckSquare, AlertTriangle, Clock, Users, Server, Code, Cog, Truck, Wrench, BarChart2 } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faCheckSquare, faUsers, faExclamationTriangle, faChartBar, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({ title, children, icon: Icon }) => (
-    <div className="bg-white shadow-md rounded-lg p-4 duration-300 hover:shadow-2xl hover:scale-105">
-      <h2 className="text-xl font-semibold mb-2 flex items-center">
-        <Icon size={24} className="mr-2" />
+const ConsiderationCard = ({ title, description, icon }) => (
+  <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 h-38 flex items-center">
+    <div className="w-full">
+      <h2 className="text-2xl font-semibold mb-2 flex items-center">
+        <div className="bg-white p-2 rounded-full mr-2">
+          <FontAwesomeIcon icon={icon} className="text-green-600" />
+        </div>
         {title}
       </h2>
-      {children}
+      <p className="text-lg">{description}</p>
     </div>
-  );
-  
-  const PhaseCard = ({ phase, title, duration, icon: Icon }) => (
-    <Card title={`Phase ${phase}: ${title}`} icon={Icon}>
-      <p className="text-lg">Duration: {duration}</p>
-    </Card>
-  );
+  </div>
+);
 
-
-
-  const RevisedKeyConsiderationsSlide = () => (
-    <SlideWrapper title="Key Implementation Considerations">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card title="Iterative Development" icon={Cog}>
-          <p className="text-lg">Implement agile methodologies for continuous improvement throughout the project</p>
-        </Card>
-        <Card title="Extensive Testing" icon={CheckSquare}>
-          <p className="text-lg">Allocate sufficient time for thorough testing of AI models and integrated systems</p>
-        </Card>
-        <Card title="Stakeholder Management" icon={Users}>
-          <p className="text-lg">Regular communication and alignment with stakeholders to manage expectations</p>
-        </Card>
-        <Card title="Regulatory Compliance" icon={AlertTriangle}>
-          <p className="text-lg">Ensure ongoing compliance with evolving data protection and privacy regulations</p>
-        </Card>
-        <Card title="Scalability Planning" icon={BarChart2}>
-          <p className="text-lg">Design the system architecture to accommodate future expansion and increased data loads</p>
-        </Card>
-        <Card title="Knowledge Transfer" icon={Users}>
-          <p className="text-lg">Develop comprehensive documentation and training programs for long-term system maintenance</p>
-        </Card>
+const KeyConsiderationsSlide = () => (
+  <SlideWrapper title="Key Implementation Considerations">
+    <div className="bg-green-50 p-12 max-w-7xl mx-auto rounded-3xl shadow-xl h-[65vh] flex items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <ConsiderationCard
+          title="Iterative Development"
+          description="Implement agile methodologies for continuous improvement throughout the project"
+          icon={faCog}
+        />
+        <ConsiderationCard
+          title="Extensive Testing"
+          description="Allocate sufficient time for thorough testing of AI models and integrated systems"
+          icon={faCheckSquare}
+        />
+        <ConsiderationCard
+          title="Stakeholder Management"
+          description="Regular communication and alignment with stakeholders to manage expectations"
+          icon={faUsers}
+        />
+        <ConsiderationCard
+          title="Regulatory Compliance"
+          description="Ensure ongoing compliance with evolving data protection and privacy regulations"
+          icon={faExclamationTriangle}
+        />
+        <ConsiderationCard
+          title="Scalability Planning"
+          description="Design the system architecture to accommodate future expansion and increased data loads"
+          icon={faChartBar}
+        />
+        <ConsiderationCard
+          title="Knowledge Transfer"
+          description="Develop comprehensive documentation and training programs for long-term system maintenance"
+          icon={faGraduationCap}
+        />
       </div>
-    </SlideWrapper>
-  );
+    </div>
+  </SlideWrapper>
+);
 
-  export default RevisedKeyConsiderationsSlide;
+export default KeyConsiderationsSlide;
