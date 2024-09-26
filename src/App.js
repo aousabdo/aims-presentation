@@ -41,6 +41,9 @@ const slides = [
   { component: AboutAnalyticaTwo, name: 'Our Success Stories' },
   { component: QnA, name: 'Q&A' },
   { component: AppendixSlide, name: 'Appendix' },
+  { component: ImplementationStrategyOneSlide, name: 'Implementation Strategy' },
+  { component: TimelineSlide, name: 'Implementation Timeline' },
+  { component: RevisedKeyConsiderationsSlide, name: 'Key Considerations' },
   { component: AIMSRisksTitleSlide, name: 'AIMS Project: High-Level Risks and Mitigations' },
   { component: DataPrivacySecuritySlide, name: 'Risk 1: Data Privacy and Security' },
   { component: SystemReliabilitySlide, name: 'Risk 2: System Reliability and Downtime' },
@@ -51,9 +54,6 @@ const slides = [
   { component: ProjectCollaborationSlide, name: 'Project Collaboration' },
   { component: TabukMunicipalitySlide, name: 'Tabuk Municipality' },
   { component: NEOMProjectSlide, name: 'NEOM Project' },
-  { component: ImplementationStrategyOneSlide, name: 'Implementation Strategy' },
-  { component: TimelineSlide, name: 'Implementation Timeline' },
-  { component: RevisedKeyConsiderationsSlide, name: 'Key Considerations' },
 ];
 
 function App() {

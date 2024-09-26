@@ -1,7 +1,7 @@
 import React from 'react';
 import SlideWrapper from './SlideWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faExclamationTriangle, faUsers, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faExclamationTriangle, faUsers, faHandshake , faCog} from '@fortawesome/free-solid-svg-icons';
 
 const AppendixSlide = () => {
   return (
@@ -10,8 +10,8 @@ const AppendixSlide = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 h-48 flex items-center">
             <h2 className="text-3xl font-semibold flex items-center">
-              <FontAwesomeIcon icon={faFileAlt} className="mr-2 text-blue-600" />
-              Detailed slides to support our solution
+              <FontAwesomeIcon icon={faCog} className="mr-2 text-blue-600" />
+              Implementation strategy and Timeline
             </h2>
           </div>
 
