@@ -34,7 +34,7 @@ const slides = [
   { component: ProposedSolutionComponents, name: 'Proposed Solution Components' },
   { component: GoogleMap, name: 'High-level Solution Scope' },
   { component: SolutionArchitecture, name: 'Solution Architecture' },
-  { component: SolutionFeatures, name: 'Solution Features: AI Capabilities' },
+  // { component: SolutionFeatures, name: 'Solution Features: AI Capabilities' },
   { component: HighLevelOperatingModel, name: 'High-Level Operating Model' },
   { component: CostAnalysisSlide, name: 'Cost Analysis' },
   { component: AboutAnalyticaOne, name: 'About Analytica' },

@@ -12,12 +12,6 @@ const Card = ({ title, children, icon: Icon }) => (
       {children}
     </div>
   );
-  
-  // const PhaseCard = ({ phase, title, duration, icon: Icon }) => (
-  //   <Card title={`Phase ${phase}: ${title}`} icon={Icon}>
-  //     <p className="text-lg">Duration: {duration}</p>
-  //   </Card>
-  // );
 
   const PhaseCard = ({ phase, title, duration, icon: Icon }) => (
     <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 h-22 flex items-center">

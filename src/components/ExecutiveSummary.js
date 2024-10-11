@@ -24,20 +24,11 @@ const ExecutiveSummary = () => (
         </ul>
       </section>
       <section className="bg-gradient-to-r from-green-100 to-green-50 p-6 rounded-xl shadow-lg">
-        <h2 className="text-3xl font-bold mb-6 text-green-800 border-b-2 border-green-500 pb-2">Objectives</h2>
-        <ul className="grid grid-cols-2 gap-4">
-          {[
-            { icon: Brain, text: "Implement an AI-driven integrated monitoring system" },
-            { icon: Lock, text: "Ensure data sovereignty and security compliance" },
-            { icon: Bell, text: "Provide real-time analytics and alerts" },
-            { icon: Zap, text: "Optimize existing infrastructure and introduce cutting-edge technologies" }
-          ].map(({ icon: Icon, text }, index) => (
-            <li key={index} className="flex items-center bg-white p-3 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
-              <Icon size={24} className="mr-3 text-green-600" />
-              <span>{text}</span>
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-3xl font-bold mb-6 text-green-800 border-b-2 border-green-500 pb-2">Objective</h2>
+        <div className="flex items-center bg-white p-4 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+          <Shield size={28} className="mr-4 text-green-600 flex-shrink-0" />
+          <span className="text-xl text-green-800">Provide creative and attainable solution to secure the bypass restricted area without any violation</span>
+        </div>
       </section>
     </div>
   </SlideWrapper>

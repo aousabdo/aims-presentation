@@ -1,6 +1,6 @@
 import React from 'react';
 import SlideWrapper from './SlideWrapper';
-import { FileText, Layers, MapPin, Cpu, Zap, Users, Building, HelpCircle } from 'lucide-react';
+import { FileText, Layers, MapPin, Cpu, Zap, Users, Building, HelpCircle, Book } from 'lucide-react';
 
 const TableOfContents = () => (
   <SlideWrapper title="Table of Contents">
@@ -8,12 +8,13 @@ const TableOfContents = () => (
     {[
         { icon: FileText, title: "Executive Summary" },
         { icon: Layers, title: "Proposed Solution Components" },
-        { icon: MapPin, title: "Google Map: High-level Solution Scope" },
+        { icon: MapPin, title: "High-level Solution Scope" },
         { icon: Cpu, title: "Solution Architecture" },
         { icon: Zap, title: "Solution Features" },
         { icon: Users, title: "High-Level Operating Model" },
-        { icon: Building, title: "About Analytica" },
-        { icon: HelpCircle, title: "Q&A" }
+        // { icon: Building, title: "About Analytica" },
+        { icon: HelpCircle, title: "Q&A" },
+        { icon: Book, title: "Appendix" }
       ].map(({ icon: Icon, title }, index) => (
         <div key={index} className="flex items-center bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 group">
           <div className="bg-white rounded-full p-4 mr-6 shadow-md group-hover:shadow-lg transition-all duration-300">
